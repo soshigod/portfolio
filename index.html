@@ -4,13 +4,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Soshi Yoshida Portfolio</title>
-  <link rel="icon" type="image/png" href="images/soshi_velvet_logo.png">
-  <link rel="stylesheet" href="style.css" />
-  <!-- model-vierのリンク -->
-  <script type="module"
-src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
-</script>
+  <title>soshi yoshida portfolio</title>
+  <link rel="icon" type="image/png" href="images/soshi_velvet_logo.svg">
+  <link rel="stylesheet" href="supreme-style.css" />
+
 <!-- フォントのリンク -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,96 +15,81 @@ src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
 
 </head>
 
-
 <body>
 
   <!-- header -->
-  <header>
+  <header>  
+  <div class="header-text-logo">
+    
+    <div class="logo">
+      <img src="images/soshi_velvet_logo.svg">
+    </div>
 
-  <div class="slideshow">
-
-    <img src="images/portfolio.png" class="slide">
-    <img src="images/final.png" class="slide">
-    <img src="images/lostinriverie_final.png" class="slide">
-    <img src="images/ig_1.png" class="slide">
-
-  </div>
-
-  <div class="header-content">
     <h1>soshi yoshida</h1>
-    <p>3DCG Artist / Visual Designer <br>
-        Blender / UE5 / After Effects
-    </p>
+
   </div>
 
 </header>
 
-  <!-- about -->
-  <!-- <section class="about">
-    <h2>About</h2>
-    <p>
-      2005年生まれ。日本の3DCGアーティスト。<br>
-      <br>
-      Blender / UE5 / After Effects
-    </p>
-  </section> -->
-
   <!-- works -->
   <section class="works">
-    <h2>Works</h2>
-
+   
     <div class="work-list">
 
        <a href="work01.html" class="work-card">
-        <div class="work-card">
-        <img src="images/portfolio.png" alt="">
-        <h3>Redhair Rosy<br>
-            Heart-Shaped Devil II
-        </h3>
-        <p>Music Video / 2025</p>
+        <div>
+        <img src="images/portfolio.png">
       </div></a>
       
         <div class="work-card">
-        <img src="images/lostinriverie_final.png" alt="">
-        <h3>P'ortable room™︎ <br>
+        <img src="images/lostinriverie_final.png">
+        <!-- <h3>P'ortable room™︎ <br>
             Lost in reverie
         </h3>
-        <p>Art Work / 2026</p>
+        <p>Art Work / 2026</p> -->
       </div>
 
       <div class="work-card">
         <img src="images/demo03.png" alt="">
-        <h3>TWO & PURE♡ Oops Popup 02</h3>
-        <p>Visualizer / 2026</p>
+        <!-- <h3>TWO & PURE♡ Oops Popup 02</h3>
+        <p>Visualizer / 2026</p> -->
       </div>
 
-      <div class="work-card">
-        <model-viewer
-        src="images/face03.glb"
-        alt="3D model"
-        auto-rotate
-        camera-controls
-        exposure="2"
-        shadow-intensity="1"
-        environment-image="neutral">
-        </model-viewer>
-        <h3>Face-model01</h3>
-        <p>3D Modeling / 2025</p>
+        <div class="work-card">
+        <img src="images/inShikyu02.png">
+      </div>
+
+        <div class="work-card">
+        <img src="images/ig_1.png">
+      </div>
+
+        <div class="work-card">
+        <img src="images/final.png">
+      </div>
+
+        <div class="work-card">
+        <img src="images/cover.png">
       </div>
 
     </div>
   </section>
 
-  <!-- contact -->
-  <section class="contact">
-    <h2>Contact</h2>
-    <p>Instagram: @soshigod_</p>
-    <p>Email: sopihasnomoney@gmail.com</p>
-  </section>
+<section class="works-card">
+
+  <div class="section-inner">
+
+    <a href="about.html" class="about-link">
+      About
+    </a>
+        <a href="contact.html" class="about-link">
+      Contact
+    </a>
+
+  </div>
 
   <!-- footer -->
   <footer>
-    <p>© 2026 Soshi Yoshida Portfolio</p>
+    <p>© 2026 soshi yoshida portfolio</p>
   </footer>
 
 </body>
