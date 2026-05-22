@@ -14,7 +14,6 @@ body {
   line-height: 1.6;
 }
 
-/* テキスト */
 .header-text-logo {
   text-align: center;
   position: relative;
@@ -37,30 +36,51 @@ header h1 {
 }
 
 section { 
-  padding: 5px 10px;
   padding-bottom: 1rem;
-  max-width: 46rem;
-  margin: auto;
+  max-width: 42rem;
+  margin: 0 auto;
+}
+@media (max-width: 600px) {
+  section {
+    padding-bottom: 1rem;
+    max-width: 28rem;
+    margin: 0 auto;
+  }
 }
 
 h2 {
 text-align: left;
 margin-top: 5rem;
   font-family: "Intel One Mono", monospace;
-  font-weight: 5px;
+  font-weight: 500;
   font-size: 0.8rem;
+  line-height: 1.2;
 }
 
 /* works */
 .works {
   padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+  padding-right: 0;
+  max-width: none;
 }
 
 .work-list {
  display: flex;
   gap: 1px;
   flex-wrap: wrap;
+  /* width: fit-content; */
+  margin: 0 auto;
+  width: calc(6 * 7rem + 5 * 1px);
 }
+@media (max-width: 600px) {
+  .work-list {
+    width: calc(4 * 7rem + 3 * 1px);
+  }
+}
+
 
 .work-card {
   position: relative;
@@ -127,6 +147,21 @@ margin-top: 5rem;
   line-height: 1.2;
 }
 
+.Link {
+  display: inline-block;
+ text-decoration: none;
+ color: black;
+ font-size: 0.8rem;
+ 
+ background: rgb(255, 0, 0, 0);
+ padding: 0;
+}
+.Link:hover {
+  color: #ffffff;
+  background: red;
+  padding: 0;
+}
+
 .Back {
   display: inline-block;
   margin-top: 3rem;
@@ -137,7 +172,6 @@ margin-top: 5rem;
  background: rgb(255, 0, 0, 0);
  padding: 0;
 }
-
 .Back:hover {
   color: #ffffff;
   background: red;
@@ -199,4 +233,86 @@ line-height: 1.2;
   display: flex;
   align-items: center;
   gap: 24px;
+}
+
+/* work pageのcss */
+
+.slide {
+  display: none; /*none = 見えない状態*/
+
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  width: 50rem;
+}
+
+/*　最初の画像　*/
+.gallery:not(:has(.slide:target)) /*  */
+.slide:first-child {
+  display: block;
+}
+
+/*　ターゲットされた画像　*/
+.slide:target {
+  display: block; /*block = 下に改行して積み重ねていく　この場合だと画面が切り替わる*/
+}
+
+/*　画像　*/
+.slide img {
+  width: 100%;
+  display: block;
+}
+
+/*UI*/
+.gallery-ui {
+  font-size: 0.7rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 20px;
+}
+/*矢印のリンクみたいなのを消す*/
+.gallery-ui a {
+  text-decoration: none;
+  color: black;
+}
+
+.gallery {
+  width: 100%;
+  max-width: 900px;
+
+  margin: 0 auto;
+}
+.gallery-video_3-2 {
+  width: 100%;
+
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  display: block;
+}
+.gallery-video_16-9 {
+  width: 100%;
+  height: auto;
+
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+.gallery-video_1-1 {
+  width: 10%;
+  height: auto;
+
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+.gallery-video_9-16 {
+  width: 100%;
+  height: auto;
+
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  display: block;
 }
