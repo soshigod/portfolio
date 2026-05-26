@@ -77,7 +77,7 @@ margin-top: 5rem;
 }
 @media (max-width: 600px) {
   .work-list {
-    width: calc(4 * 7rem + 3 * 1px);
+    width: calc(3 * 7rem + 3 * 1px);
   }
 }
 
